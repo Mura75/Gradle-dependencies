@@ -1,0 +1,155 @@
+ext {
+    //Version
+    androidSupportVersion = '27.0.2'
+
+    rxJavaVersion = '2.1.6'
+    rxAndroidVersion = '2.0.1'
+
+    circleImageVersion = '1.3.0'
+    butterknifeVersion = '8.8.1'
+    materialDialogVersion = '0.9.6.0'
+    fragNavVersion = '2.4.0'
+    roomVersion = '1.0.0'
+
+    glideVersion = '4.3.1'
+    picassoVersion = '2.5.2'
+    daggerVersion = '2.13'
+    permissionDispatcherVersion = '3.0.1'
+    googlePlayVersion = '11.6.2'
+    gsonVersion = '2.8.2'
+    moxyVersion = '1.5.3'
+    retrofitVersion = '2.3.0'
+    okHttp3Version = '3.8.1'
+    loggerVersion = '2.1.1'
+    oneSignalVersion = '[3.5.6, 3.99.99]'
+
+    javaxVersion = '1.0'
+
+    junitVersion = '4.12'
+    mockitoVersion = '1.10.19'
+    hamcrestVersion = '1.1'
+    robolectricVersion = '3.0'
+
+    //Packages
+    supportPackage = 'com.android.support'
+    googlePlaypackage = 'com.google.android.gms'
+
+    reactivePackage = 'io.reactivex.rxjava2'
+
+    glidePackage = 'com.github.bumptech.glide'
+    hdodenhofPackage = 'de.hdodenhof'
+    jakeWhartonPackage = 'com.jakewharton'
+    picassoPackage = 'com.squareup.picasso'
+    materialDialogPackage = 'com.afollestad.material-dialogs'
+
+    daggerPackage = 'com.google.dagger'
+    javaxPackage = 'javax.annotation'
+    gsonPackage = 'com.google.code.gson'
+    moxyPackage = 'com.arello-mobile'
+    permissionDispatcherPackage = 'com.github.hotchemi'
+
+    junitPackage = 'junit'
+    mockitoPackage = 'org.mockito'
+    hamcrestPackage = 'org.hamcrest'
+    robolectricPackage = 'org.robolectric'
+    retrofitPackage = 'com.squareup.retrofit2'
+    okHttp3Package = 'com.squareup.okhttp3'
+    loggerPackage = 'com.orhanobut'
+    oneSignalPackage = 'com.onesignal'
+    fragNavPackage = 'com.ncapdevi'
+    roomPackage = 'android.arch.persistence.room'
+
+
+    //Support Libraries dependencies
+    supportDependencies = [
+            androidCompatv7            : buildDependency(supportPackage, 'appcompat-v7', androidSupportVersion),
+            androidSupportv4           : buildDependency(supportPackage, 'support-v4', androidSupportVersion),
+            androidDesign              : buildDependency(supportPackage, 'design', androidSupportVersion),
+            androidPercent             : buildDependency(supportPackage, 'percent', androidSupportVersion),
+            androidRecyclerView        : buildDependency(supportPackage, 'recyclerview-v7', androidSupportVersion),
+            androidCardView            : buildDependency(supportPackage, 'cardview-v7', androidSupportVersion),
+            androidSupportAnnotation   : buildDependency(supportPackage, 'support-annotations', androidSupportVersion)
+    ]
+
+    //RX Libraries dependencies
+    rxDependencies = [
+            rxJava      : buildDependency(reactivePackage, 'rxjava', rxJavaVersion),
+            rxAndroid   : buildDependency(reactivePackage, 'rxandroid', rxAndroidVersion)
+    ]
+
+    //Dagger Libraries dependencies
+    daggerDependencies = [
+            dagger           : buildDependency(daggerPackage, 'dagger', daggerVersion),
+            daggerCompiler   : buildDependency(daggerPackage, 'dagger-compiler', daggerVersion)
+    ]
+
+    materialDialogDependencies = [
+            core        : buildDependency(materialDialogPackage, 'core', materialDialogVersion),
+            commons     : buildDependency(materialDialogPackage, 'commons', materialDialogVersion)
+    ]
+
+    permissionDispatcherDependencies = [
+            permissionsdispatcher         : buildDependency(permissionDispatcherPackage, 'permissionsdispatcher', permissionDispatcherVersion),
+            permissionsdispatcherCompiler : buildDependency(permissionDispatcherPackage, 'permissionsdispatcher-processor', permissionDispatcherVersion)
+    ]
+
+    //Elemental Libraries dependencies
+    circleImageView = buildDependency(hdodenhofPackage, 'circleimageview', circleImageVersion)
+    butterknife = buildDependency(jakeWhartonPackage, 'butterknife', butterknifeVersion)
+    butterknifeProcessor = buildDependency(jakeWhartonPackage, 'butterknife-compiler', butterknifeVersion)
+    picasso = buildDependency(picassoPackage, 'picasso', picassoVersion)
+    gson = buildDependency(gsonPackage, 'gson', gsonVersion)
+    customLogger = buildDependency(loggerPackage, 'logger', loggerVersion)
+    oneSignal = buildDependency(oneSignalPackage, 'OneSignal', oneSignalVersion)
+    fragNav = buildDependency(fragNavPackage, 'frag-nav', fragNavVersion)
+    constraintLayout = buildDependency('com.android.support.constraint', 'constraint-layout', '1.0.2')
+    inputMask = buildDependency('com.redmadrobot', 'inputmask', '2.3.0')
+    eventBus = buildDependency('org.greenrobot', 'eventbus', '3.1.1')
+
+    //Testing
+    testingDependencies = [
+            junit           : buildDependency(junitPackage, 'junit', junitVersion),
+            mockito         : buildDependency(mockitoPackage, 'mockito-core', mockitoVersion),
+            robolectric     : buildDependency(robolectricPackage, 'robolectric', robolectricVersion),
+            hamcrest        : buildDependency(hamcrestPackage, 'hamcrest-library', hamcrestVersion)
+    ]
+
+    moxyDependencies = [
+            moxy           : buildDependency(moxyPackage, 'moxy', moxyVersion),
+            moxyAndroid    : buildDependency(moxyPackage, 'moxy-android', moxyVersion),
+            moxyAppCompat  : buildDependency(moxyPackage, 'moxy-app-compat', moxyVersion),
+            moxyCompiler   : buildDependency(moxyPackage, 'moxy-compiler', moxyVersion)
+    ]
+
+    retrofitDependencies = [
+            retrofit       : buildDependency(retrofitPackage, 'retrofit', retrofitVersion),
+            retrofitGson   : buildDependency(retrofitPackage, 'converter-gson', retrofitVersion),
+            retrofitRxJava : buildDependency(retrofitPackage, 'adapter-rxjava2', retrofitVersion)
+    ]
+
+    okHttpDependencies = [
+            urlconnection  : buildDependency(okHttp3Package, 'okhttp-urlconnection', okHttp3Version),
+            logging  : buildDependency(okHttp3Package, 'logging-interceptor', okHttp3Version)
+    ]
+
+    googlePlayDependencies = [
+            playServices         : buildDependency(googlePlaypackage, 'play-services', googlePlayVersion),
+            playServicesMap      : buildDependency(googlePlaypackage, 'play-services-maps', googlePlayVersion),
+            playServicesPlace    : buildDependency(googlePlaypackage, 'play-services-places', googlePlayVersion),
+            playServicesGcm      : buildDependency(googlePlaypackage, 'play-services-gcm', googlePlayVersion)
+    ]
+
+    glideDependencies = [
+            glide           : buildDependency(glidePackage, 'glide', glideVersion),
+            glideCompiler   : buildDependency(glidePackage, 'compiler', glideVersion)
+    ]
+
+    roomDependencies = [
+            room            : buildDependency(roomPackage, 'runtime', roomVersion),
+            roomCompiler    : buildDependency(roomPackage, 'compiler', roomVersion)
+    ]
+}
+
+static String buildDependency(String pack, String dependency, String version) {
+    return "${pack}:${dependency}:${version}"
+}
